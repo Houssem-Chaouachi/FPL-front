@@ -15,7 +15,9 @@ import { MatInputModule } from "@angular/material/input";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import {MatRadioModule} from '@angular/material/radio';
 import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
 import { ListeSondageComponent } from './sondage/liste-sondage/liste-sondage.component';
+import { VoteComponent } from './vote/vote.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { ListeSondageComponent } from './sondage/liste-sondage/liste-sondage.com
     LoginComponent,
     HomePageComponent,
     AddSujetComponent,
-    ListeSondageComponent
+    ListeSondageComponent,
+    VoteComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import { ListeSondageComponent } from './sondage/liste-sondage/liste-sondage.com
     MatFormFieldModule,
     MatInputModule,
     MatRadioModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [  {
     provide: HTTP_INTERCEPTORS,

@@ -1,0 +1,24 @@
+<mat-card *ngIf="voteSondage" class="example-card"[formGroup]='voteForm' >
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{voteSondage.title}} </mat-card-title>
+    </mat-card-header>
+  
+    <mat-card-content>
+      <p>
+      {{voteSondage.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <mat-radio-group
+        aria-label="Select an option"
+        name="choix"
+        formControlName='choix'
+      >
+        <mat-radio-button value="oui">OUI</mat-radio-button>
+        <mat-radio-button value="non">NON</mat-radio-button>
+      </mat-radio-group>
+    </mat-card-actions>
+    <button mat-raised-button (click)='voter()' color="primary">Voter</button>
+  </mat-card>
+  

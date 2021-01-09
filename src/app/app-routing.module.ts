@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterUsersComponent } from './register-users/register-users.component';
 import { AddSujetComponent } from './sondage/add-sujet/add-sujet.component';
 import { ListeSondageComponent } from './sondage/liste-sondage/liste-sondage.component';
+import { VoteComponent } from './vote/vote.component';
 
 const routes: Routes = [
   {
@@ -21,7 +22,10 @@ const routes: Routes = [
   },
   {
     path:'liste-sujet', component:ListeSondageComponent
-  }
+  },
+  {
+    path:'vote/:id', component:VoteComponent
+  },
 ];
 
 @NgModule({

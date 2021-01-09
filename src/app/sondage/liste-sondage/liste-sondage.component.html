@@ -15,14 +15,7 @@
         {{element.description}}
         </td>
         <td class="text-center">
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="oui">
-                <label class="form-check-label" for="inlineRadio1">OUi</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="non">
-                <label class="form-check-label" for="inlineRadio2">NON</label>
-              </div>
+          <button type="button" class="btn btn-success"[routerLink]="['/vote', element._id]" >Voter</button>
         </td>
       </tr>
       
