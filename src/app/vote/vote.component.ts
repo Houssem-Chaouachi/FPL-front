@@ -35,7 +35,7 @@ export class VoteComponent implements OnInit {
   voter(){
     this.sondage.vote(this.id, this.voteForm.value).subscribe(()=>{
       this.router.navigate(['/'])
-      console.log(this.voteForm.value);
+     
       
     })
   }

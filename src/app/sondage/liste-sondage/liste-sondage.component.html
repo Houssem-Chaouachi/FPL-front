@@ -3,6 +3,7 @@
       <tr>
         <th class="text-center">Title</th>
         <th class="text-center">Description</th>
+        <th class="text-center">Sondage</th>
         <th class="text-center">Vote</th>
       </tr>
     </thead>
@@ -13,6 +14,14 @@
         </td>
         <td class="text-center">
         {{element.description}}
+        </td>
+        <td class="text-center">
+          <div> OUI </div>
+       {{(element.oui) * 100/  element.totale |number:'1.0-0'}}%
+       </td>
+       <td>
+       <div>NON</div>
+       {{(element.non )*100/ element.totale | number:'1.0-0'}} %
         </td>
         <td class="text-center">
           <button type="button" class="btn btn-success"[routerLink]="['/vote', element._id]" >Voter</button>
