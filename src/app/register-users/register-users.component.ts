@@ -17,12 +17,13 @@ registerForm:FormGroup
       name:new FormControl('',[Validators.required]),
       email: new FormControl('', [Validators.required && Validators.email]),
       password: new FormControl('', [Validators.required && Validators.minLength(8)]),
-      confirmPassword: new FormControl('', [Validators.required])
+ 
     })
   }
+  get form() { return this.registerForm.controls; }
 registerUser(){
   this.auth.register(this.registerForm.value).subscribe(() =>{
-  this.router.navigate(['/']);
+  this.router.navigate(['/login']);
   },
   (err)=>{
     alert(err.error.message);
