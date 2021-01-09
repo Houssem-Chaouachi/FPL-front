@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SondageService } from 'src/app/services/sondage.service';
 
 @Component({
   selector: 'app-liste-sondage',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./liste-sondage.component.css']
 })
 export class ListeSondageComponent implements OnInit {
-
-  constructor() { }
+listeSujet;
+  constructor(private sondage:SondageService) { }
 
   ngOnInit(): void {
+  
+      this.getsujet();
+  
   }
+
+  getsujet() {
+    this.sondage.getAllSondage().subscribe((res:any)=>{
+      this.listeSujet = res;
+      console.log('listte', this.listeSujet);
+      
+    })
+   }
 
 }

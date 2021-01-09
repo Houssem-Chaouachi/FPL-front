@@ -8,8 +8,6 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class AddSujetComponent implements OnInit {
   token = localStorage.getItem('token') ;
- 
-  
   sujetForm:FormGroup
   constructor(private sondage:SondageService) { }
 

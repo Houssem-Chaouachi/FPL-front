@@ -6,13 +6,13 @@
         <th class="text-center">Vote</th>
       </tr>
     </thead>
-    <tbody >
+    <tbody *ngFor='let element of listeSujet, let i=index' >
       <tr>
         <td class="text-center">
-          <div>pa </div>
+          <div>{{element.title}} </div>
         </td>
         <td class="text-center">
-        patient.day
+        {{element.description}}
         </td>
         <td class="text-center">
             <div class="form-check form-check-inline">

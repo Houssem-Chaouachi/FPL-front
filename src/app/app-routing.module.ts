@@ -4,6 +4,7 @@ import { HomePageComponent } from './home/home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterUsersComponent } from './register-users/register-users.component';
 import { AddSujetComponent } from './sondage/add-sujet/add-sujet.component';
+import { ListeSondageComponent } from './sondage/liste-sondage/liste-sondage.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,9 @@ const routes: Routes = [
   },
   {
     path:'add-sujet', component:AddSujetComponent
+  },
+  {
+    path:'liste-sujet', component:ListeSondageComponent
   }
 ];
 
