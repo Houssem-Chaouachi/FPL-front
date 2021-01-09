@@ -1,0 +1,12 @@
+<form [formGroup]='sujetForm' class=" container example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Title</mat-label>
+      <input matInput formControlName='title' placeholder="Title Here..." >
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName='description'  placeholder="Donnez plus de details..."></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)='addSujet()' style="margin-left:20px;" >Add Sondage</button>
+  </form>
