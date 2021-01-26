@@ -10,7 +10,7 @@ export class AuthService {
 token = localStorage.getItem('token');
 isLogin = new BehaviorSubject<boolean>(this.UserHastoken());
   constructor(private webreq: WebRequestService) { }
-  private UserHastoken(): boolean {
+   UserHastoken(): boolean {
     return !!localStorage.getItem('token');
   }
   public UserIsAuthenticated(): boolean {

@@ -7,17 +7,17 @@
         <th class="text-center">Vote</th>
       </tr>
     </thead>
-    <tbody *ngFor='let element of listeSujet, let i=index' >
-      <tr>
+    <tbody *ngFor='let element of listeSujet | reverse, let i=index' >
+      <tr *ngIf='i'>
         <td class="text-center">
-          <div>{{element.title}} </div>
+          <div>{{element.title}}{{i}} </div>
         </td>
         <td class="text-center">
         {{element.description}}
         </td>
         <td class="text-center">
           <div> OUI </div>
-       {{(element.oui) * 100/  element.totale |number:'1.0-0'}}%
+       {{(element.oui) * 100/  element.totale | number:'1.0-0'}}%
        </td>
        <td>
        <div>NON</div>
